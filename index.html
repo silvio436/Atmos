@@ -1,146 +1,269 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <title>Atmos IPTV – Qualidade Premium</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<title>Atmos IPTV – TV, Filmes e Séries</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: Arial, Helvetica, sans-serif;
-    }
+<style>
+:root{
+  --neon1:#00f0ff;
+  --neon2:#8a2be2;
+  --bg:#05060a;
+  --card:#0c0f1a;
+}
 
-    body {
-      background: radial-gradient(circle at top, #0f2027, #000);
-      color: #fff;
-    }
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,Helvetica,sans-serif}
 
-    header {
-      padding: 25px;
-      text-align: center;
-      background: linear-gradient(90deg, #00f0ff, #7b00ff);
-    }
+body{
+  background:radial-gradient(circle at top,#0c1630,var(--bg));
+  color:#fff;
+}
 
-    header h1 {
-      font-size: 2.2rem;
-      letter-spacing: 2px;
-    }
+header{
+  padding:80px 20px;
+  text-align:center;
+}
 
-    header p {
-      margin-top: 10px;
-      opacity: 0.9;
-    }
+header h1{
+  font-size:3rem;
+  letter-spacing:3px;
+  background:linear-gradient(90deg,var(--neon1),var(--neon2));
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
 
-    .container {
-      max-width: 1100px;
-      margin: auto;
-      padding: 40px 20px;
-      text-align: center;
-    }
+header p{
+  margin-top:20px;
+  font-size:1.2rem;
+  opacity:.9;
+}
 
-    .container h2 {
-      font-size: 2rem;
-      margin-bottom: 20px;
-    }
+.cta{
+  margin-top:40px;
+  display:flex;
+  gap:20px;
+  justify-content:center;
+  flex-wrap:wrap;
+}
 
-    .container p {
-      font-size: 1.1rem;
-      opacity: 0.9;
-      margin-bottom: 30px;
-    }
+.btn{
+  padding:16px 36px;
+  border-radius:40px;
+  text-decoration:none;
+  color:#fff;
+  font-size:1.1rem;
+  background:linear-gradient(90deg,var(--neon1),var(--neon2));
+  box-shadow:0 0 25px rgba(0,240,255,.8);
+  transition:.3s;
+}
 
-    .buttons {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-    }
+.btn:hover{
+  transform:scale(1.07);
+  box-shadow:0 0 40px rgba(138,43,226,1);
+}
 
-    .btn {
-      padding: 15px 30px;
-      font-size: 1.1rem;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 30px;
-      background: linear-gradient(90deg, #00f0ff, #7b00ff);
-      box-shadow: 0 0 15px rgba(123, 0, 255, 0.8);
-      transition: 0.3s;
-    }
+.section{
+  max-width:1200px;
+  margin:auto;
+  padding:80px 20px;
+}
 
-    .btn:hover {
-      transform: scale(1.05);
-      box-shadow: 0 0 30px rgba(0, 240, 255, 1);
-    }
+.section h2{
+  text-align:center;
+  font-size:2.4rem;
+  margin-bottom:20px;
+}
 
-    .features {
-      margin-top: 60px;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 30px;
-    }
+.section p.sub{
+  text-align:center;
+  opacity:.85;
+  margin-bottom:60px;
+}
 
-    .card {
-      background: rgba(255,255,255,0.05);
-      border-radius: 20px;
-      padding: 25px;
-      box-shadow: 0 0 20px rgba(0,0,0,0.6);
-    }
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:30px;
+}
 
-    .card h3 {
-      margin-bottom: 10px;
-      color: #00f0ff;
-    }
+.card{
+  background:var(--card);
+  padding:30px;
+  border-radius:20px;
+  box-shadow:0 0 30px rgba(0,0,0,.6);
+}
 
-    footer {
-      margin-top: 60px;
-      padding: 20px;
-      text-align: center;
-      font-size: 0.9rem;
-      opacity: 0.6;
-    }
-  </style>
+.card h3{
+  color:var(--neon1);
+  margin-bottom:10px;
+}
+
+.devices{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:25px;
+  margin-top:40px;
+}
+
+.device{
+  background:var(--card);
+  padding:25px 30px;
+  border-radius:18px;
+  min-width:200px;
+  text-align:center;
+}
+
+.plans{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:35px;
+}
+
+.plan{
+  background:linear-gradient(180deg,#0e1430,#070a16);
+  padding:40px 30px;
+  border-radius:25px;
+  text-align:center;
+  box-shadow:0 0 35px rgba(0,0,0,.7);
+}
+
+.plan h3{
+  font-size:1.6rem;
+  margin-bottom:15px;
+  color:var(--neon1);
+}
+
+.plan .price{
+  font-size:2.2rem;
+  margin:20px 0;
+}
+
+.plan ul{
+  list-style:none;
+  margin:25px 0;
+}
+
+.plan ul li{
+  margin:10px 0;
+  opacity:.9;
+}
+
+.faq{
+  max-width:900px;
+  margin:auto;
+}
+
+.faq details{
+  background:var(--card);
+  margin-bottom:15px;
+  padding:20px;
+  border-radius:15px;
+}
+
+footer{
+  padding:40px 20px;
+  text-align:center;
+  opacity:.6;
+  font-size:.9rem;
+}
+</style>
 </head>
 
 <body>
 
 <header>
   <h1>ATMOS IPTV</h1>
-  <p>Entretenimento sem limites • Qualidade Premium</p>
+  <p>Entretenimento completo em um só lugar. Canais, filmes, séries e esportes.</p>
+
+  <div class="cta">
+    <a class="btn" href="https://wa.me/5547992227975" target="_blank">Teste Grátis</a>
+    <a class="btn" href="https://wa.me/5547992227975" target="_blank">Falar no WhatsApp</a>
+  </div>
 </header>
 
-<section class="container">
-  <h2>Assista Tudo em um Só Lugar</h2>
-  <p>Canais, filmes, séries, esportes e muito mais com qualidade máxima.</p>
+<section class="section">
+  <h2>Por que escolher a Atmos?</h2>
+  <p class="sub">Estabilidade, qualidade e conteúdo sempre atualizado.</p>
 
-  <div class="buttons">
-    <a class="btn" href="https://wa.me/5547992227975" target="_blank">💬 Falar no WhatsApp</a>
-    <a class="btn" href="https://wa.me/5547992227975" target="_blank">🚀 Teste Grátis</a>
+  <div class="grid">
+    <div class="card"><h3>+10.000 Canais</h3><p>Canais nacionais, internacionais, esportes e adultos.</p></div>
+    <div class="card"><h3>Filmes e Séries</h3><p>Catálogo VOD atualizado diariamente com lançamentos.</p></div>
+    <div class="card"><h3>Alta Estabilidade</h3><p>Servidores rápidos e proteção contra travamentos.</p></div>
+    <div class="card"><h3>Qualidade HD / FHD / 4K</h3><p>Imagem limpa e fluida.</p></div>
   </div>
+</section>
 
-  <div class="features">
-    <div class="card">
-      <h3>📺 +10.000 Canais</h3>
-      <p>TV aberta, fechada, esportes, filmes e muito mais.</p>
+<section class="section">
+  <h2>Compatível com todos os dispositivos</h2>
+
+  <div class="devices">
+    <div class="device">📱 Celular</div>
+    <div class="device">📺 Smart TV</div>
+    <div class="device">💻 Computador</div>
+    <div class="device">📦 TV Box</div>
+    <div class="device">🎮 Fire Stick</div>
+  </div>
+</section>
+
+<section class="section">
+  <h2>Planos IPTV</h2>
+  <p class="sub">Escolha o plano ideal para você</p>
+
+  <div class="plans">
+    <div class="plan">
+      <h3>Mensal</h3>
+      <div class="price">R$ XX</div>
+      <ul>
+        <li>Acesso completo</li>
+        <li>Todos os canais</li>
+        <li>Suporte rápido</li>
+      </ul>
+      <a class="btn" href="https://wa.me/5547992227975">Assinar</a>
     </div>
 
-    <div class="card">
-      <h3>🎬 Filmes & Séries</h3>
-      <p>Lançamentos atualizados diariamente.</p>
+    <div class="plan">
+      <h3>Trimestral</h3>
+      <div class="price">R$ XX</div>
+      <ul>
+        <li>Economia maior</li>
+        <li>Conteúdo completo</li>
+        <li>Atualizações constantes</li>
+      </ul>
+      <a class="btn" href="https://wa.me/5547992227975">Assinar</a>
     </div>
 
-    <div class="card">
-      <h3>⚡ Alta Performance</h3>
-      <p>Servidores rápidos e estáveis 24h.</p>
-    </div>
-
-    <div class="card">
-      <h3>📱 Multi Dispositivos</h3>
-      <p>Celular, TV Box, Smart TV, PC e tablet.</p>
+    <div class="plan">
+      <h3>Anual</h3>
+      <div class="price">R$ XX</div>
+      <ul>
+        <li>Melhor custo-benefício</li>
+        <li>Suporte prioritário</li>
+        <li>Sem surpresas</li>
+      </ul>
+      <a class="btn" href="https://wa.me/5547992227975">Assinar</a>
     </div>
   </div>
+</section>
+
+<section class="section faq">
+  <h2>Dúvidas Frequentes</h2>
+
+  <details>
+    <summary>Funciona na minha TV?</summary>
+    <p>Sim, funciona em Smart TVs, TV Box, celular, computador e Fire Stick.</p>
+  </details>
+
+  <details>
+    <summary>Tem teste grátis?</summary>
+    <p>Sim, oferecemos teste para você conhecer o serviço.</p>
+  </details>
+
+  <details>
+    <summary>Precisa de internet boa?</summary>
+    <p>Recomendamos pelo menos 10MB para HD e 25MB para 4K.</p>
+  </details>
 </section>
 
 <footer>
