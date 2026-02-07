@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atmos - Soluções em Entretenimento Digital</title>
+    <meta name="description" content="Plataforma de gestão para parceiros de entretenimento digital. Sistema pós-pago de alta performance.">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #ff0000; 
+            --neon: #ff003c; 
+            --dark: #050505;
+            --light-dark: #121212;
+            --text: #ffffff;
+            --gray: #b0b0b0;
+            --shadow-neon: 0 0 15px rgba(255, 0, 60, 0.7), 0 0 30px rgba(255, 0, 60, 0.4);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; scroll-behavior: smooth; }
+        body { background-color: var(--dark); color: var(--text); line-height: 1.6; overflow-x: hidden; }
+
+        header { padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; background: rgba(5, 5, 5, 0.95); z-index: 1000; border-bottom: 2px solid var(--neon); box-shadow: var(--shadow-neon); }
+        .logo img { height: 50px; width: auto; }
+        nav a { color: var(--text); text-decoration: none; margin-left: 20px; font-weight: 500; transition: 0.3s; text-transform: uppercase; font-size: 0.85rem; }
+        nav a:hover { color: var(--neon); text-shadow: var(--shadow-neon); }
+
+        .hero { padding: 120px 5% 80px; text-align: center; background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)), url('https://images.unsplash.com/photo-1593784991095-a205039470b6?q=80&w=1470&auto=format&fit=crop'); background-size: cover; background-position: center; border-bottom: 1px solid #222; }
+        .hero h1 { font-size: 3rem; margin-bottom: 20px; text-transform: uppercase; }
+        .hero h1 span { color: var(--neon); text-shadow: var(--shadow-neon); }
+        .hero p { font-size: 1.1rem; color: var(--gray); margin-bottom: 35px; max-width: 800px; margin-inline: auto; }
+
+        .btn { padding: 16px 40px; border-radius: 5px; text-decoration: none; font-weight: 700; transition: 0.4s; display: inline-block; cursor: pointer; text-transform: uppercase; border: none; text-align: center; }
+        .btn-primary { background: var(--neon); color: white; box-shadow: var(--shadow-neon); }
+        .btn-primary:hover { transform: scale(1.05); filter: brightness(1.2); }
+
+        .seo-text-section { padding: 60px 5%; background: var(--dark); border-top: 1px solid #222; }
+        .seo-container { max-width: 900px; margin: 0 auto; text-align: center; }
+        .seo-container h2 { color: var(--neon); margin-bottom: 20px; font-size: 1.8rem; text-transform: uppercase; }
+        .seo-container p { color: var(--gray); margin-bottom: 20px; font-size: 1rem; text-align: justify; }
+
+        .reseller { padding: 80px 5%; background: var(--light-dark); }
+        .section-title { text-align: center; margin-bottom: 60px; }
+        .section-title h2 { font-size: 2.2rem; text-transform: uppercase; }
+        .section-title .highlight { color: var(--neon); text-shadow: var(--shadow-neon); }
+        
+        .reseller-content { display: flex; flex-wrap: wrap; align-items: center; gap: 40px; margin-top: 40px; }
+        .reseller-text { flex: 1; min-width: 300px; }
+        .reseller-image { flex: 1; min-width: 300px; border-radius: 15px; overflow: hidden; border: 2px solid var(--neon); box-shadow: var(--shadow-neon); }
+        .reseller-image img { width: 100%; display: block; }
+
+        .reseller-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-top: 50px; }
+        .card-reseller { background: #1a1a1a; padding: 30px; border-radius: 10px; border-left: 4px solid var(--neon); }
+        .card-reseller i { font-size: 35px; color: var(--neon); margin-bottom: 15px; }
+        .card-reseller h3 { margin-bottom: 10px; font-size: 1.2rem; }
+
+        .whatsapp-float { position: fixed; bottom: 30px; right: 30px; background: #25d366; color: white; width: 65px; height: 65px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 35px; z-index: 1000; transition: 0.3s; box-shadow: 0 0 20px rgba(0,0,0,0.5); }
+        
+        footer { padding: 60px 5% 30px; background: #020202; text-align: center; border-top: 1px solid #222; }
+        .footer-logo img { height: 40px; margin-bottom: 20px; }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            header { flex-direction: column; padding: 15px; }
+            nav { margin-top: 10px; display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
+            nav a { margin: 0; font-size: 0.75rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="https://atmoscanais.com/wp-content/uploads/elementor/thumbs/cropped-PLAYVISION-LOGO-qmr8sfvkn1d7etuhq7cccpj85ps233pbbihkp996gk.png" alt="Atmos Soluções Digitais">
+        </div>
+        <nav>
+            <a href="#inicio">Início</a>
+            <a href="#vantagens">Tecnologia</a>
+            <a href="#reseller">Painel de Gestão</a>
+        </nav>
+    </header>
+
+    <section class="hero" id="inicio">
+        <h1>ATMOS: PLATAFORMA DE<span> GESTÃO DE CONTEÚDO 2026</span></h1>
+        <p>A tecnologia OTT mais estável do mercado para parceiros de entretenimento digital. Alta performance e escalabilidade para o seu negócio.</p>
+        <a href="https://wa.me/5547992227975?text=Olá, vim pelo anúncio e quero conhecer a plataforma de gestão." class="btn btn-primary">Falar com Consultor</a>
+    </section>
+
+    <section class="seo-text-section" id="vantagens">
+        <div class="seo-container">
+            <h2>Tecnologia OTT de Alta Performance</h2>
+            <p>A Atmos oferece uma infraestrutura de <strong>Streaming Multiplataforma</strong> ideal para empreendedores que buscam escalabilidade. Nosso sistema de entrega via CDN garante que o conteúdo chegue ao usuário final com a máxima qualidade e estabilidade.</p>
+            <p>Ao se tornar um parceiro, você terá acesso a um sistema de gestão robusto, permitindo o controle total sobre sua base de acessos de forma intuitiva e segura.</p>
+        </div>
+    </section>
+
+    <section class="reseller" id="reseller">
+        <div class="section-title">
+            <h2>Sistema para <span class="highlight">Parceiros Digitais</span></h2>
+            <p>Gerencie seu negócio com tecnologia de ponta e custo reduzido.</p>
+        </div>
+        <div class="reseller-content">
+            <div class="reseller-image">
+                <img src="https://atmoscanais.com/wp-content/uploads/elementor/thumbs/cropped-PLAYVISION-LOGO-qmr8sfvkn1d7etuhq7cccpj85ps233pbbihkp996gk.png" alt="Atmos Dashboard">
+            </div>
+            <div class="reseller-text">
+                <h3 style="color: var(--neon); margin-bottom: 15px;">Gestão Dinâmica Pós-Paga</h3>
+                <p>O modelo de negócio Atmos permite que você foque no atendimento e crescimento da sua marca sem investimentos iniciais pesados.</p>
+                <ul style="list-style: none; margin-top: 20px;">
+                    <li style="margin-bottom: 12px;"><i class="fas fa-check-circle" style="color: var(--neon);"></i> <b>Acessos Flexíveis:</b> Gere credenciais para seus usuários de forma ilimitada.</li>
+                    <li style="margin-bottom: 12px;"><i class="fas fa-check-circle" style="color: var(--neon);"></i> <b>Faturamento Pós-Pago:</b> Pague apenas pelos usuários ativos na plataforma.</li>
+                    <li style="margin-bottom: 12px;"><i class="fas fa-check-circle" style="color: var(--neon);"></i> <b>Monitoramento Real-Time:</b> Acompanhe todas as conexões em tempo real.</li>
+                    <li style="margin-bottom: 12px;"><i class="fas fa-check-circle" style="color: var(--neon);"></i> <b>Suporte Técnico:</b> Equipe disponível para auxiliar na sua operação.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-logo">
+            <img src="https://atmoscanais.com/wp-content/uploads/elementor/thumbs/cropped-PLAYVISION-LOGO-qmr8sfvkn1d7etuhq7cccpj85ps233pbbihkp996gk.png" alt="Atmos Oficial">
+        </div>
+        <p>&copy; 2026 Atmos - Soluções em Tecnologia Digital.</p>
+    </footer>
+
+    <a href="https://wa.me/5547992227975" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+</body>
+</html>
